@@ -1,4 +1,7 @@
-CRUD operations Written in PHP for Microsoft SQL Server
-====
+<h1>CRUD PHP MSSQL</h1>
 
-Crap...
+<h2>CRUD operations written in PHP for Microsoft SQL Server</h2>
+
+<p>This is a fork of <a href="https://github.com/kissthink/crud-php-mssql">https://github.com/kissthink/crud-php-mssql</a>.  I use MSSQL functions instead of ODBC functions. Note, mssql_connect is no longer supported by PHP since PHP 7.0 and was depreciated in 5.3. I have changed or remove all ukrainian/russian language. I have abstracted the table select into <code>scripts/table.php</code>. I have also done some heavy refactoring. It is missing some of the functionality of the previous repo. This code has not been throughly tested or perfected, but if you need CRUD for MSSQL in PHP using MSSQL functions, hopefully this is of help to you!</p>
+
+<p>To use, enter your database info in <code>scripts/db_functions.php</code>, table info in <code>scripts/table.php</code>, and place the folder on a web server. Ensure you have the sqlsrv <code>.so</code> for linux or <code>.dll</code> for windows and it is linked in you php.ini. On Ubuntu Linux, use <code>apt-get install php5-sybase</code> or the equivalent for your distro. On windows, good luck; The following looks like a good starting place. <a href="http://stackoverflow.com/questions/9986804/php-fatal-error-call-to-undefined-function-mssql-connect">http://stackoverflow.com/questions/9986804/php-fatal-error-call-to-undefined-function-mssql-connect</a>.</p>
