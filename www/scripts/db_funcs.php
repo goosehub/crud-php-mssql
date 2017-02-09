@@ -1,15 +1,16 @@
 <?php 
-	
-	$sql = array(dsn => "SQLEXPRESS", username => "Alexey", password => "");
-	$dbconf = array(database => "university", schema => "dbo");
+$sql['dsn'] = 'architypedb\architypesql';
+$sql['username'] = 'sa';
+$sql['password'] = '05014193';
+$dbconf['database'] = 'HolmesStamp';
+$dbconf['schema'] = 'dbo';
 
-	function db_connect() {
-		global $sql;
+function db_connect() {
+	global $sql;
 
-		$conn = odbc_connect ($sql['dsn'], $sql['username'], $sql['password']); //п?дключення до джерела даних ODBC
-		if($conn === false) {
-    		echo "Could not connect to $dsn.\n";
-		}
-		return $conn;
-	};
-?>
+	$conn = mssql_connect ($sql['dsn'], $sql['username'], $sql['password']);
+	if ($conn === false) {
+		echo "Could not connect to $dsn.\n";
+	}
+	return $conn;
+};

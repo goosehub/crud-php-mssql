@@ -1,16 +1,13 @@
 <!doctype html>
 <head>
-    <title>MSSQL</title>
-    <?php include "templates/resources.php" ?>
+    <title>PHP MSSQL CRUD</title>
+    <?php require_once "templates/resources.php" ?>
 </head>
-
 <body>
-
-<?php include "templates/header.php" ?>
+<?php require_once "templates/header.php" ?>
 
 <div id="container">
-
-	<h3>This lab is reffered to CRUD operations within Relational Databases.</h3>
+	<h1>PHP MSSQL CRUD</h1>
 
 	<div class="alert alert-success">
 		Choose any option on navbar.
@@ -18,6 +15,6 @@
 
 </div>
 
-<?php include 'templates/footer.php' ?>
+<?php require_once 'templates/footer.php' ?>
 </body>
 </html>
